@@ -1,0 +1,11 @@
+@import "tailwindcss";
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+img {
+  pointer-events: none; /* Prevents drag interaction */
+  -webkit-user-drag: none; /* Disables dragging in Safari */
+}
