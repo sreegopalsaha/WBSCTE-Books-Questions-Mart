@@ -4,7 +4,7 @@ import OldBooks from "../assets/old-books.webp"
 
 function TextbookMarketplace() {
   return (
-    <section className="bg-gradient-to-t from-[#FFFFFF] via-[#D2DCFF] to-[#FFFFFF]  py-24">
+    <section className="bg-gradient-to-t from-[#FFFFFF] via-[#D2DCFF] to-[#FFFFFF]  py-4">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-[640px] mx-auto text-center">
           <div className="flex justify-center mb-6">
