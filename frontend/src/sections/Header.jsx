@@ -12,8 +12,10 @@ export default function Header() {
           <p className="text-white/60 hidden md:block">
             Download Previous Year Questions and E-Books
           </p>
+          <Link to={"/search"} className="inline-flex gap-1 justify-center items-center">
           <p>Get started for free</p>
           <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
+          </Link>
         </div>
       </div>
       <div className="py-5 px-5">

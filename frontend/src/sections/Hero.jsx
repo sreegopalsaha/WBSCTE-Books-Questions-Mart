@@ -10,7 +10,11 @@ export default function Hero() {
     <div className='container max-w-none'>
       <div className='md:flex'>
        <div>
-          <div className='text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight'>visit our main website</div>
+          <a 
+          href='https://rezime.in'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg cursor-pointer tracking-tight'>visit our main website</a>
           <h1 className='text-6xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6'>Prepare <br /> like a Pro</h1>
           <p className='text-xl text-[#010D3E] tracking-tight mt-6'>
             Download all previous year questions, e-books, and other study related Content for free.
