@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ArrowIcon from "../assets/right-arrow-black.webp"
 import HeroImg from "../assets/hero-img.webp"
 import BookImg from "../assets/book.webp"
@@ -15,12 +16,16 @@ export default function Hero() {
             Download all previous year questions, e-books, and other study related Content for free.
           </p>
           <div className='flex gap-2 items-center mt-[30px]'>
-            <button className='bg-black text-white px-4 py-1 rounded-lg font-medium inline-flex align-items justify-center tracking-tight'>Get for free</button>
-            <button className='text-black bg-transparent gap-1 inline-flex'>
+            <Link 
+            to={"/search"}
+            className='bg-black text-white px-4 py-1 rounded-lg font-medium inline-flex align-items justify-center cursor-pointer tracking-tight'>Get for free</Link>
+            <Link 
+              to={"/aboutus"}
+              className='text-black bg-transparent gap-1 inline-flex cursor-pointer'>
               <span>Learn more</span>
               <img src={ArrowIcon} alt="-->" className='h-5 w-5 mt-1'/>
               
-            </button>
+            </Link>
           </div>
       </div>
       <div className='mt-10 lg:mt-0 lg:ml-20'>

@@ -7,6 +7,7 @@ import Layout from './Layout.jsx'
 import Home from './Pages/Home.jsx'
 import AboutUs from './Pages/AboutUs.jsx'
 import HelpPage from './Pages/HelpPage.jsx'
+import SearchPage from './Pages/SearchPage.jsx'
 
 
 const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>} />
       <Route path='AboutUs' element={<AboutUs/>} />
       <Route path='helpdesk' element={<HelpPage/>}/>
+      <Route path='search' element={<SearchPage/>}/>
     </Route>
   )
 )
