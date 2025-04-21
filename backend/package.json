@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for a book-pyq-suggestion download application WBSCTE books and questions mart",
+  "license": "ISC",
+  "author": "Md Yousuf Mallik",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "prettier": "^3.5.3"
+  }
+}
