@@ -17,7 +17,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Cookies from "js-cookie";
 
 interface adminType {
-  fullname: string;
+  username: string;
   email: string;
 }
 
@@ -77,7 +77,7 @@ export default function AdminProfilePage() {
         <CardHeader className="flex flex-col items-center space-y-4">
           <Avatar className="h-24 w-24 border-2 border-primary">
             <AvatarFallback className="bg-primary/10 text-primary text-2xl">
-              {admin?.fullname
+              {admin?.username
                 ?.split(" ")
                 .map((n) => n[0])
                 .join("")}
@@ -85,7 +85,7 @@ export default function AdminProfilePage() {
           </Avatar>
           <div className="space-y-1 text-center">
             <CardTitle className="text-2xl font-bold text-foreground">
-              {admin?.fullname}
+              {admin?.username}
             </CardTitle>
             <CardDescription className="text-muted-foreground">
               {admin?.email}

@@ -2,7 +2,7 @@ import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosError } from "ax
 import Cookies from "js-cookie";
 
 const getBaseUrl = (): string  => {
-  return import.meta.env.VITE_API_BASE_URL || "http://localhost:5000"
+  return import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api/v1"
 }
   
 const api: AxiosInstance = axios.create({
@@ -29,7 +29,7 @@ api.interceptors.response.use(
 );
 
 interface LoginData {
-  email: string;
+  emailOrUsername: string;
   password: string;
 }
 

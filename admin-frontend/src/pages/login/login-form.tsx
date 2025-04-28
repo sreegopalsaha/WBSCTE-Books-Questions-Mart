@@ -13,11 +13,11 @@ import { AlertCircle, Loader } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface props {
-  className?: string
+  className?: string;
   admin: {
-    email: string
-    password: string
-  }
+    emailOrUsername: string;
+    password: string;
+  };
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (e: React.FormEvent) => void;
   loading: boolean;
@@ -52,13 +52,13 @@ export function LoginForm({
             )}
             <div className="flex flex-col gap-6">
               <div className="grid gap-3">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="emailOrUsername">Email or Username</Label>
                 <Input
                   onChange={handleChange}
-                  value={admin.email}
-                  name="email"
-                  id="email"
-                  type="email"
+                  value={admin.emailOrUsername}
+                  name="emailOrUsername"
+                  id="emailOrUsername"
+                  type="text"
                   placeholder="Enter your email"
                   required
                 />

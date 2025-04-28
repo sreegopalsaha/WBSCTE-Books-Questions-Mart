@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 interface loginForm {
-  email: string;
+  emailOrUsername: string;
   password: string;
 }
 
@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   const navigate = useNavigate();
   const [admin, setAdmin] = useState<loginForm>({
-    email: "",
+    emailOrUsername: "",
     password: "",
   });
 
