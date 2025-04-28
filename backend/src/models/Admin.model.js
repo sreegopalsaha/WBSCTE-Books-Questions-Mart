@@ -30,6 +30,13 @@ const AdminSchema = new Schema(
   { timestamps: true }
 );
 
+AdminSchema.pre("save", function (next) {
+  if (this.username) {
+    this.username = this.username.replace(/\s+/g, "");
+  }
+  next();
+});
+
 // password encryption
 AdminSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
@@ -38,7 +45,7 @@ AdminSchema.pre("save", async function (next) {
   next();
 });
 
-// custom method for password checking
+// method for password checking
 AdminSchema.methods.isPasswordCorrect = async function (password) {
   return await bcrypt.compare(password, this.password);
 };

@@ -3,6 +3,7 @@ const app = express();
 import cors from "cors";
 import globalErrorHandler from "./middlewares/globalErrorHandler.js";
 import adminRouters from "./routes/admin.routers.js";
+import visitorRouter from "./routes/visitor.routers.js";
 
 app.use(
   cors({
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/admin", adminRouters);
+app.use("/api/v1/visitor", visitorRouter);
 
 app.use(globalErrorHandler);
 
