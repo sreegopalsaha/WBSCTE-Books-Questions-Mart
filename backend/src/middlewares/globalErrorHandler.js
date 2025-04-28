@@ -13,7 +13,7 @@ const globalErrorHandler = (err, req, res, next) => {
   // Handle generic errors
   return res.status(500).json({
     success: false,
-    message: "Internal Server Error",
+    message: `Internal Server Error: ${err.message}`,
     errors: [],
     stack: process.env.NODE_ENV === "development" ? err.stack : undefined,
   });
