@@ -1,11 +1,13 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosError } from "axios";
 import Cookies from "js-cookie";
 
+const getBaseUrl = (): string  => {
+  return import.meta.env.VITE_API_BASE_URL || "http://localhost:5000"
+}
+  
 const api: AxiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: getBaseUrl(),
 });
-
-console.log(import.meta.env.VITE_API_BASE_URL)
 
 api.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   const token = Cookies.get("token");
